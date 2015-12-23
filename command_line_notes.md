@@ -5,7 +5,7 @@
 To add a single user:
 
 ```{sh}
-sudo useradd -m --create-home <username>
+sudo adduser -m --create-home <username>
 sudo passwd <username>
 ```
 
