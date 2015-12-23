@@ -19,3 +19,7 @@ do
   useradd --create-home "$user"
   echo "$user":"$passwd" | chpasswd
 done < $file
+
+## to modify new user's directories systematically, use usermod
+## For example, mkdir /home/FAST and insert the following into the loop:
+## usermod -m -d /home/FAST/"$user" "$user"
