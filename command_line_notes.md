@@ -12,7 +12,7 @@ sudo passwd <username>
 Make a user a sudoer:
 
 ```{sh}
-sudo useradd <username> sudo
+sudo adduser <username> sudo
 ```
 
 ## Groups
