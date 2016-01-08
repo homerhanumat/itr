@@ -38,5 +38,5 @@ Assume you have made an `instructors` group.
 ```{sh}
 sudo mkdir /com
 sudo chmod -R 775 /com
-sudo chown :instructors /com
+sudo chown -R :instructors /com
 ```

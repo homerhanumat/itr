@@ -1,7 +1,6 @@
 #!/usr/bin/perl -w
 
 use strict;
-use Crypt::RC4;
 use constant TRUE => -1;
 use constant FALSE => 0;
 #************************ PARAMETERS *********************************************************
