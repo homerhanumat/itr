@@ -7,7 +7,7 @@ use constant FALSE => 0;
 #************************ PARAMETERS *********************************************************
 
 
-my($sourceRoot) = "/home";
+my($sourceRoot) = "/home/FAST";
 my($group) = "instructors";
 my($permissions) = "770";
 
