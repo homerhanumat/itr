@@ -11,7 +11,7 @@ my($sourceRoot) = "/home/FAST";
 my($group) = "instructors";
 my($permissions) = "770";
 
-my($instructor) = "homer";
+my($instructor) = "hwhite0";
 my($studentfile) = "students.txt";
 my($flag) = "_com";
 
