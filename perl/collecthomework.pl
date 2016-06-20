@@ -18,50 +18,50 @@ my($sourceRoot) = "/home/FAST";
 
 sub showUsage {
 
-print "\nUSAGE: perl collecthomework.pl --instructor=<name> --assignment=<name> --studentfile=<filename>\n";
+print "\nUSAGE: perl collecthomework.pl --inst=<name> --assign=<name> --file=<filename>\n";
 exit;
 
 }
 
 
-my($instructor,$assignment,$studentfile);
+my($inst,$assign,$file);
 
 
 
 foreach my $item(@ARGV) {
 
-  if ($item =~ m/--instructor=/i) {
-		$instructor = substr($item,13,length($item)-13);
+  if ($item =~ m/--inst=/i) {
+		$inst = substr($item,7,length($item)-7);
 	}
 
 
- 	if ($item =~ m/--assignment=/i) {
-                $assignment = substr($item,13,length($item)-13);
+ 	if ($item =~ m/--assign=/i) {
+                $assign = substr($item,9,length($item)-9);
         }
 
 
 
-	if ($item =~ m/--studentfile=/i) {
-                $studentfile = substr($item,14,length($item)-14);
+	if ($item =~ m/--file=/i) {
+                $file = substr($item,7,length($item)-7);
         }
 
 }
 
 
-if (!$instructor || !$assignment || !$studentfile) {
+if (!$inst || !$assign || !$file) {
 &showUsage;
 }
 
 
-my($destinationRoot) = $sourceRoot . "/" . $instructor . "/homework";
+my($destinationRoot) = $sourceRoot . "/" . $inst . "/homework";
 
 
 my($noSubmissionYet) = "\nThe following students have not submitted homework yet:\n------------------------------------------------------------";
-my($summaryLine) = "\nHomework assignments retrieved for assignment $assignment:\n-------------------------------------";
+my($summaryLine) = "\nHomework assignments retrieved for assignment $assign:\n-------------------------------------";
 
 
 my($INPUTFILE);
-open ($INPUTFILE, "<$studentfile") or die "Could not open $studentfile\n";
+open ($INPUTFILE, "<$file") or die "Could not open $file\n";
 
 while (<$INPUTFILE>) {
 
@@ -78,7 +78,7 @@ while (<$INPUTFILE>) {
         my(@searchFolders) = ($sourceRoot . "/" . $inputLine . "/submit");
 	my(@foundProjects);
 
-        find( sub { push @foundProjects, $File::Find::name if /$assignment/i }, @searchFolders);
+        find( sub { push @foundProjects, $File::Find::name if /$assign/i }, @searchFolders);
 
 	
         my($projectFile);
@@ -87,7 +87,7 @@ while (<$INPUTFILE>) {
 
 		print "\nFound $projectFile.";
 
-                my ($destinationFolder) = $destinationRoot . "/" . $assignment . "/" . $inputLine;
+                my ($destinationFolder) = $destinationRoot . "/" . $assign . "/" . $inputLine;
                 unless (-e $destinationFolder) {
                         system ("mkdir -p $destinationFolder");
                 }

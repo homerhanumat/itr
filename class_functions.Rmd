@@ -2,15 +2,21 @@
 
 ## Preliminary Notes
 
-The stuff below works on my Debian system running Perl version 5.20.  Note that in the new scripts the group is "instructors", not "admins".
+The stuff below works on my Debian system running Perl version 5.20, and on the College server running Ubuntu 14.04 and Perl 5.18.
 
-You no longer need to create a password file:  all you need are admin privileges.
+In previous versions the user had to create a password file.  This is no longer the case:  now all you need is membership in the `sudo` and `instructor` groups.  The MAT 111 Czar will take care of this for you (though you may need to remind him/her to do this).
 
-This version of the scripts works when you the students are all directoy under the `/home` directory (not in, for instance `/home/FAST`.  Also it works best if you have just one class at a time.  I'll fix this in later versions, as needed.)
+This version of the scripts is tailored to the current RStudio server, in which all regular users are in the `/home/FAST` directory.
+
+## Installation and Setup
+
+Save copies of `collecthomework.pl`, `createdirectories.pl` and `returnhomework.pl` into your Home directory on the Server.
+
+Create a textfile of student usernames, one per line in the usual way, and save it to your Home directory.  In the examples that follow, this file will be called `students.txt`.
 
 ## Directory Creation
 
-To create directories, use the script `creatdirectories.pl` in your Home directory.  Open the shell (**Tools --> Shell**) and run:
+To create directories, use the script `creatdirectories.pl`.  Open the shell (**Tools --> Shell**) and run:
 
 ```{sh eval = FALSE}
 sudo perl createdirectories.pl --studentfile=students.txt
@@ -21,29 +27,28 @@ sudo perl createdirectories.pl --studentfile=students.txt
 To collect homework,  just modify the command below and run it from within R:
 
 ```{r eval = FALSE}
-system("perl collecthomework.pl --instructor=hwhite0 --assignment=HW02 --studentfile=students.txt")
+system("perl collecthomework.pl --inst=hwhite0 --assign=HW02 --file=students.txt")
 ```
 
-No `sudo` is required here.  **Note:**  modify the `instructor`, `assignment` and `studentfile` arguments as needed!
+No `sudo` is required here.  **Note:**  modify the `inst`, `assign` and `file` arguments as needed!
 
 ## Returning Homework
-
-Put the script `returnhomework.pl` into your Home directory.  Open it and modify the following parameters:
-
-* `$instructor`
-* `$studentfile`
-* `$flag`
 
 Open the shell (**Tools --> Shell** ) and run something like this:
 
 
 ```{sh eval = FALSE}
-sudo perl returnhomework.pl --path=HW02
+sudo perl returnhomework.pl --path=HW02 --inst=hwhite0 --file=students.txt --flag=_com
 ```
+
+Again, modify arguments as needed.  In this script:
+
+* `path` is the tag you used to identify an assignment to collect (it's the `assign` tag from `collecthomework.pl` script);
+* `flag` is the tag you include in the filename of the "comments" version that you plan to return to students.
 
 ## Generating a Report
 
-For this you will use classr, as described in the package vignette, i.e., something like:
+For this you will use still use classr as described in the package vignette, i.e., something like:
 
 ```{r eval = FALSE}
 myReport <- SubmissionReport(studentfile="students.txt",

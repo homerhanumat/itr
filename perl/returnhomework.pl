@@ -11,10 +11,6 @@ my($sourceRoot) = "/home/FAST";
 my($group) = "instructors";
 my($permissions) = "770";
 
-my($instructor) = "hwhite0";
-my($studentfile) = "students.txt";
-my($flag) = "_com";
-
 #*********************************************************************************************
 
 
@@ -30,7 +26,7 @@ exit;
 }
 
 
-my($path,$destinationRoot);
+my($path,$destinationRoot, $inst, $file, $flag);
 
 
 
@@ -40,10 +36,22 @@ foreach my $item(@ARGV) {
    if ($item =~ m/--path=/i) {
                 $path = substr($item,7,length($item)-7);
         }
+        
+    if ($item =~ m/--inst=/i) {
+                $inst = substr($item,7,length($item)-7);
+        }
+    
+    if ($item =~ m/--file=/i) {
+                $file = substr($item,7,length($item)-7);
+        }
+        
+    if ($item =~ m/--flag=/i) {
+                $path = substr($item,7,length($item)-7);
+        }
 
 }
 
-$path = $sourceRoot . "/" . $instructor . "/" . "homework/" . $path . "/";
+$path = $sourceRoot . "/" . $inst . "/" . "homework/" . $path . "/";
 
 
 
@@ -66,7 +74,7 @@ my($summaryLine) = "\nHomework graded in folder $path:\n------------------------
 
 
 my($INPUTFILE);
-open ($INPUTFILE, "<$studentfile") or die "Could not open $studentfile\n";
+open ($INPUTFILE, "<$file") or die "Could not open $file\n";
 
 while (<$INPUTFILE>) {
 
