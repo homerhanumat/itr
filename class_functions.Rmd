@@ -14,6 +14,8 @@ Save copies of `collecthomework.pl`, `createdirectories.pl` and `returnhomework.
 
 Create a textfile of student usernames, one per line in the usual way, and save it to your Home directory.  In the examples that follow, this file will be called `students.txt`.
 
+Create a directory in your Home directory called `homework`.
+
 ## Directory Creation
 
 To create directories, use the script `creatdirectories.pl`.  Open the shell (**Tools --> Shell**) and run:
