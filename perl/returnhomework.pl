@@ -46,7 +46,7 @@ foreach my $item(@ARGV) {
         }
         
     if ($item =~ m/--flag=/i) {
-                $path = substr($item,7,length($item)-7);
+                $flag = substr($item,7,length($item)-7);
         }
 
 }
