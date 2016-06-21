@@ -10,7 +10,22 @@ This version of the scripts is tailored to the current RStudio server, in which 
 
 ## Installation and Setup
 
+A conveneint way to obtain the scipts is through git.
+
+```{r eval = FALSE}
+git clone https://github.com/homerhanumat/itr.git
+```
+
+
 Save copies of `collecthomework.pl`, `createdirectories.pl` and `returnhomework.pl` into your Home directory on the Server.
+
+To update:
+
+```{r eval = F}
+cd itr
+git pull origin master
+```
+
 
 Create a textfile of student usernames, one per line in the usual way, and save it to your Home directory.  In the examples that follow, this file will be called `students.txt`.
 
