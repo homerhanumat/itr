@@ -20,6 +20,8 @@ git clone https://github.com/homerhanumat/itr.git
 
 Save copies of `collecthomework.pl`, `createdirectories.pl` and `returnhomework.pl` into your Home directory on the Server.  (They are in the `perl` directory.)  Also save a copy of `class_functions.Rmd` to your Home.  **Never modify the contents of `itr`!**  (If you do, there will be problems updating later on.)
 
+*Note:*  If you are using R Studio on the Digital Ocean server, then you will need to modify one line in each of the Perl scripts.  The line to modify is near the beginning and involves the expression `my($sourceRoot)`.  Directions for modification are in the comments underneath that line.
+
 ### Updates
 
 To update the scripts, go to the Shell and run:

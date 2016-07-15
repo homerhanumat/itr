@@ -8,6 +8,9 @@ use constant FALSE => 0;
 
 
 my($sourceRoot) = "/home/FAST";
+## if you are using RStudio on Digital Ocean then then there is no FAST,
+## so modify the above line to:
+## my($sourceRoot) = "/home";
 
 #*********************************************************************************************
 
