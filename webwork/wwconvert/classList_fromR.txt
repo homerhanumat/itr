@@ -1,0 +1,15 @@
+N	336996	Brown, Matthew Garrett	Registered(05/13/2016)	NA	matthewb@georgetowncollege.edu	NA	Undeclared	JR	A
+N	377458	Bush, Lindy K	Registered(04/14/2016)	NA	lbush@georgetowncollege.edu	NA	Undeclared	SO	A
+N	515133	Chapman, Layken D	Registered(06/02/2016)	NA	lchapman@georgetowncollege.edu	NA	Undeclared	FF	A
+N	466482	Fox, James Evan	Registered(06/02/2016)	NA	efox@georgetowncollege.edu	NA	Undeclared	HS	A
+N	413413	Greenwell, Irelend Grace	Registered(05/11/2016)	NA	igreenwell@georgetowncollege.edu	NA	Undeclared	FF	A
+N	516829	Hall, Jordan Chase	Registered(06/07/2016)	NA	jchall@georgetowncollege.edu	NA	Undeclared	FF	A
+N	331525	Hoertz, Benjamin S.	Registered(04/11/2016)	NA	bhoertz@georgetowncollege.edu	NA	Communication/Media Stud	SR	A
+N	497391	Hornberger, Megan Patricia	Registered(04/14/2016)	NA	mhornberger@georgetowncollege.edu	NA	Undeclared	SO	A
+N	531475	Ledesma, Courtlyn R	Registered(06/08/2016)	NA	cledesma@georgetowncollege.edu	NA	Undeclared	FF	A
+N	529712	Livers, Voshon Ramond	Registered(06/01/2016)	NA	vlivers@georgetowncollege.edu	NA	Undeclared	FF	A
+N	339505	Moore, Amanda L	Registered(04/14/2016)	NA	almoore@georgetowncollege.edu	NA	Undeclared	SO	A
+N	513826	Peffer, Mathau Ryan	Registered(05/26/2016)	NA	mrpeffer@georgetowncollege.edu	NA	Undeclared	FF	A
+N	442226	Ryan, Cassandra R	Registered(06/09/2016)	NA	cassandrar@georgetowncollege.edu	NA	Undeclared	FF	A
+N	340036	Smith, Dylan Kendrick	Registered(06/06/2016)	NA	dylans@georgetowncollege.edu	NA	Undeclared	FF	A
+N	485906	Weedman, Tatiana E	Registered(04/14/2016)	NA	weedmant@georgetowncollege.edu	NA	Undeclared	SO	A
