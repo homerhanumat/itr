@@ -1,0 +1,16 @@
+---
+title: "Various WeBWorK Admin Commands"
+author: "Homer White"
+date: "August 19, 2016"
+output: html_document
+---
+
+# Server Load
+
+To set MaxRequestWorkers and MaxConnectionsPerChild, go to:
+
+```
+/etc/apache2/mods-enabled/mpm_prefork.conf
+```
+
+At 4G memory, I'm trying 5 and 10 for instructor-development periods, and 20 and 40 for regular semester use.
