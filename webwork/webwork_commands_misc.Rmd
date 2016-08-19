@@ -14,3 +14,9 @@ To set MaxRequestWorkers and MaxConnectionsPerChild, go to:
 ```
 
 At 4G memory, I'm trying 5 and 10 for instructor-development periods, and 20 and 40 for regular semester use.
+
+Then a graceful restart:
+
+```
+sudo apache2ctl graceful
+```
