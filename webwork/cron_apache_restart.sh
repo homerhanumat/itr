@@ -4,6 +4,7 @@
 # 0,15,30,45 * * * *  /bin/bash /usr/local/sbin/cron_apache_restart.sh
 
 totalk=$(awk '/^MemAvailable:/{print $2}' /proc/meminfo)
-if [ $totalk < 500000 ]; then
-  apachectl graceful
+b=500000
+if [ "$totalk" -le "$b" ]; then
+  apache2ctl graceful
 fi
