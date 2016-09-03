@@ -6,5 +6,5 @@
 totalk=$(awk '/^MemAvailable:/{print $2}' /proc/meminfo)
 b=500000
 if [ "$totalk" -le "$b" ]; then
-  apache2ctl graceful
+  /usr/sbin/apache2ctl graceful
 fi
