@@ -26,7 +26,7 @@ sudo groupadd <groupname>
 Add a user to a group:
 
 ```{sh}
-sudo adduser <username> <groupname>
+sudo usermod -a -G <username> <groupname>
 ```
 
 ## Make a Common Directory
