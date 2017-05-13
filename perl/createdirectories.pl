@@ -5,8 +5,8 @@ use constant TRUE => -1;
 use constant FALSE => 0;
 #************************ PARAMETERS *********************************************************
 
-my($sourceRoot) = "/home/GEORGETOWN.EDU";
-## if you are using RStudio on Digital Ocean then then there is no GEORGETOWN.EDU,
+my($sourceRoot) = "/home/GEORGETOWNCOLLEGE.EDU";
+## if you are using RStudio on Digital Ocean then then there is no GEORGETOWNCOLLEGE.EDU,
 ## so modify the above line to:
 ## my($sourceRoot) = "/home";
 my($group) = "instructors";
