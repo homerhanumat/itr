@@ -8,6 +8,8 @@ use constant FALSE => 0;
 
 
 my($sourceRoot) = "/home/GEORGETOWNCOLLEGE.EDU";
+my($group) = "instructors";
+my($permissions) = "770";
 ## if you are using RStudio on Digital Ocean then then there is no GEORGETOWNCOLLEGE.EDU,
 ## so modify the above line to:
 ## my($sourceRoot) = "/home";
@@ -76,7 +78,12 @@ while (<$INPUTFILE>) {
 
 
 
-
+        my($studentHome) = ($sourceRoot . "/" . $inputLine);
+        my($securityToken) = $inputLine . ":" . $group;
+        system("sudo chown -R $securityToken" $studentHome");
+        $summaryLine = "Changed ownership of path $studentHome to $securityToken.\n";
+        system("sudo chmod -R $permissions $studentHome");
+        $summaryLine = "Changed permissions of path $studentHome to $permissions.\n";
 
         my(@searchFolders) = ($sourceRoot . "/" . $inputLine . "/submit");
 	my(@foundProjects);

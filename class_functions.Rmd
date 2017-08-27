@@ -49,13 +49,13 @@ sudo perl createdirectories.pl --studentfile=students.txt
 
 ## Homework Collection
 
-To collect homework,  just modify the command below and run it from within R:
+To collect homework, open the shell (**Tools --> Shell** ) and run something like this:
 
-```{r eval = FALSE}
-system("perl collecthomework.pl --inst=hwhite0 --assign=HW02 --file=students.txt")
+```{sh eval = F}
+sudo perl collecthomework.pl --inst=hwhite0 --assign=HW02 --file=students.txt
 ```
 
-No `sudo` is required here.  **Note:**  modify the `inst`, `assign` and `file` arguments as needed!
+**Note:**  modify the `inst`, `assign` and `file` arguments as needed!
 
 ## Returning Homework
 
