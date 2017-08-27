@@ -80,7 +80,7 @@ while (<$INPUTFILE>) {
 
         my($studentHome) = ($sourceRoot . "/" . $inputLine);
         my($securityToken) = $inputLine . ":" . $group;
-        system("sudo chown -R $securityToken" $studentHome");
+        system("sudo chown -R $securityToken $studentHome");
         $summaryLine = "Changed ownership of path $studentHome to $securityToken.\n";
         system("sudo chmod -R $permissions $studentHome");
         $summaryLine = "Changed permissions of path $studentHome to $permissions.\n";
