@@ -80,6 +80,3 @@ myReport <- SubmissionReport(studentfile="students.txt",
                              folder="homework",
                              assigntype="DA")
 ```
-
-
-
