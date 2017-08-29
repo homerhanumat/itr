@@ -104,6 +104,7 @@ while (<$INPUTFILE>) {
 
                 $destinationFolder = $destinationFolder . "/";
                 system ("cp -f $projectFile $destinationFolder");
+                system("sudo chmod -R 775 $destinationFolder");
 		$summaryLine = $summaryLine . "\n $inputLine submitted file: $projectFile";		
 
 	}
