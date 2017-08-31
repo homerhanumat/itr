@@ -123,3 +123,5 @@ close ($INPUTFILE);
 $summaryLine = $summaryLine . "\n\n" . $noSubmissionYet . "\n\n";
 
 print $summaryLine;
+
+system("sudo chmod -R 770 homework");
