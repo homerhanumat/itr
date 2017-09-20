@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+##!/usr/bin/perl -w
 
 use strict;
 use File::Find;
@@ -104,8 +104,8 @@ while (<$INPUTFILE>) {
 
                 $destinationFolder = $destinationFolder . "/";
                 system ("cp -f $projectFile $destinationFolder");
-                system("sudo chmod -R 775 $destinationFolder");
-		$summaryLine = $summaryLine . "\n $inputLine submitted file: $projectFile";		
+		$summaryLine = $summaryLine . "\n $inputLine submitted file: $projectFile";	
+		system("sudo chmod -R 775 $destinationFolder");
 
 	}
 
