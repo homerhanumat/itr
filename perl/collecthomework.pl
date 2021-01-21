@@ -7,7 +7,7 @@ use constant FALSE => 0;
 #************************ PARAMETERS *********************************************************
 
 
-my($sourceRoot) = "/home/GEORGETOWNCOLLEGE.EDU";
+my($sourceRoot) = "/usr/home/georgetowncollege.edu";
 my($group) = "instructors";
 my($permissions) = "770";
 ## if you are using RStudio on Digital Ocean then then there is no GEORGETOWNCOLLEGE.EDU,
@@ -99,6 +99,7 @@ while (<$INPUTFILE>) {
 
                 my ($destinationFolder) = $destinationRoot . "/" . $assign . "/" . $inputLine;
                 unless (-e $destinationFolder) {
+                  print "\ngot here\n";
                         system ("mkdir -p $destinationFolder");
                 }
 
@@ -125,3 +126,4 @@ $summaryLine = $summaryLine . "\n\n" . $noSubmissionYet . "\n\n";
 print $summaryLine;
 
 system("sudo chmod -R 770 homework");
+system("sudo chown -R $inst homework");

@@ -5,7 +5,7 @@ use constant TRUE => -1;
 use constant FALSE => 0;
 #************************ PARAMETERS *********************************************************
 
-my($sourceRoot) = "/home/GEORGETOWNCOLLEGE.EDU";
+my($sourceRoot) = "/usr/home/georgetowncollege.edu";
 ## if you are using RStudio on Digital Ocean then then there is no GEORGETOWNCOLLEGE.EDU,
 ## so modify the above line to:
 ## my($sourceRoot) = "/home";

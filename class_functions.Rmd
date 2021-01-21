@@ -2,11 +2,11 @@
 
 ## Preliminary Notes
 
-The stuff below works on the College's R Studio Server (CentOS 7 operating system).
+The stuff below works on the College's new R Studio Server (Ubuntu 2020 LTS operating system).
 
-In previous versions the user had to create a password file.  This is no longer the case:  now all you need is membership in the `wheel` and `instructor` groups.  The MAT 111 Czar will take care of this for you (though you may need to remind him/her to do this).
+In order to use the scripts you must have been added to the sudo and instructor groups.  Ask a sysadmin to do this for you.
 
-This version of the scripts is tailored to the current RStudio server, in which all regular users are in the `/home/GEORGETOWNCOLLEGE.EDU` directory.
+This version of the scripts is tailored to the current RStudio server, in which all regular users are in the `usr/home/georgetowncollege.edu` directory.
 
 ## Installation and Setup
 
@@ -42,7 +42,7 @@ Create a directory in your Home directory called `homework`.
 To create directories, use the script `creatdirectories.pl`.  Click on the Terminal tab and copy the following into the Terminal at the prompt:
 
 ```{sh eval = FALSE}
-sudo perl createdirectories.pl --studentfile=special.txt
+sudo perl createdirectories.pl --studentfile=students.txt
 ```
 
 Then press Enter, give your password when requested, and watch it go.
@@ -52,7 +52,7 @@ Then press Enter, give your password when requested, and watch it go.
 To collect homework run something like this in the Terminal:
 
 ```{sh eval = F}
-sudo perl collecthomework.pl --inst=hwhite0 --assign=MAT331_Final --file=students_331.txt
+sudo perl collecthomework.pl --inst=hwhite0 --assign=MAT331_Final --file=students.txt
 ```
 
 **Note:**  modify the `inst`, `assign` and `file` arguments as needed!
@@ -63,7 +63,7 @@ Run something like this in the terminal:
 
 
 ```{sh eval = FALSE}
-sudo perl returnhomework.pl --path=MAT331_Final --inst=hwhite0 --file=students_331.txt --flag=_com
+sudo perl returnhomework.pl --path=MAT331_Final --inst=hwhite0 --file=students.txt --flag=_com
 ```
 
 Again, modify arguments as needed.  In this script:
@@ -71,15 +71,3 @@ Again, modify arguments as needed.  In this script:
 * `path` is the tag you used to identify an assignment to collect (it's the `assign` tag from `collecthomework.pl` script);
 * `flag` is the tag you include in the filename of the "comments" version that you plan to return to students.
 
-
-## Generating a Report
-
-(**Note**:  In the era of attendance-taking on GConnect we don't use this feature.)
-
-For this you will use still use **classr** as described in the package vignette, i.e., something like:
-
-```{r eval = FALSE}
-myReport <- SubmissionReport(studentfile="students.txt",
-                             folder="homework",
-                             assigntype="DA")
-```
