@@ -1,19 +1,5 @@
 # Command-Line Notes
 
-## Users
-
-To add a single user:
-
-```{sh}
-sudo adduser -m --create-home <username>
-sudo passwd <username>
-```
-
-Make a user a sudoer:
-
-```{sh}
-sudo adduser <username> sudo
-```
 
 ## Groups
 
@@ -26,7 +12,7 @@ sudo groupadd <groupname>
 Add a user to a group:
 
 ```{sh}
-sudo usermod -a -G <username> <groupname>
+sudo usermod -aG <username> <groupname>
 ```
 
 ## Make a Common Directory
