@@ -26,3 +26,27 @@ sudo mkdir /com
 sudo chmod -R 775 /com
 sudo chown -R :instructors /com
 ```
+
+## PAT and Credentials (RStudio Server)
+
+Generate a PAT.  In the R console run:
+
+```
+usethis::create_github_token()
+```
+
+Name the token and copy it to your clipboard.
+
+In the Terminal:
+
+```{sh}
+touch .git-credentials
+```
+
+Then open this file and add this line:
+
+```
+https://<yourgithubusername>:<pasteinyourpat>@github.com
+```
+
+Now you can push to your repo, etc.
